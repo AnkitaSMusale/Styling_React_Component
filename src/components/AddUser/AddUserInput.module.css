@@ -1,0 +1,12 @@
+.input {
+    display: inline-block;
+}
+
+.input label{
+    color: blue;
+}
+
+.form {
+    display: block;
+    color: aqua;
+}
