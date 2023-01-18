@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Button from '../UI/Button';
 import Card from '../UI/Card';
 import classes from './AddUserInput.module.css'
+import ErrorModal from '../UI/ErrorModal';
 
 const AddUser = props =>{
 
@@ -11,7 +12,7 @@ const AddUser = props =>{
     const AddUserHandler = (e) => {
          e.preventDefault();
 
-         if(enteredUsername.trim().length === 0 || enteredAge.trim().age === 0){
+         if(enteredUsername.trim().length === 0 || enteredAge.trim().length === 0){
             return;
          }
 
@@ -34,6 +35,8 @@ const AddUser = props =>{
     }
 
     return (
+        <div>
+        <ErrorModal title="An Error occured!" message="Something went wrong!"></ErrorModal>
         <Card className={classes.input}>
             <form onSubmit={AddUserHandler}>
                  <label htmlFor='username'>UserName :</label>
@@ -43,6 +46,7 @@ const AddUser = props =>{
                  <Button type='submit'>Add User</Button>
             </form>
         </Card>
+        </div>
     )
 }
 
