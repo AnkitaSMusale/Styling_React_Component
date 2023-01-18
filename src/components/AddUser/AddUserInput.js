@@ -36,6 +36,7 @@ const AddUser = props =>{
 
     return (
         <div>
+            {/* Adding Error Modal */}
         <ErrorModal title="An Error occured!" message="Something went wrong!"></ErrorModal>
         <Card className={classes.input}>
             <form onSubmit={AddUserHandler}>
